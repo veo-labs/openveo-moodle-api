@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<libraries>
+    <library>
+        <location>lib/openveo-rest-php-client</location>
+        <name>OpenVeo REST PHP client</name>
+        <license>AGPL</license>
+        <licenseversion>3.0</licenseversion>
+    </library>
+</libraries>
