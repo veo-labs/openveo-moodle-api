@@ -67,7 +67,6 @@ class settings_form extends moodleform {
                 array('size' => 30)
         );
         $this->_form->setType('settingscdnurl', PARAM_RAW_TRIMMED);
-        $this->_form->setDefault('settingscdnurl', $this->_customdata['settingscdnurl']);
         $this->_form->addHelpButton('settingscdnurl', 'settingscdnurl', 'local_openveo_api');
         $this->_form->addRule('settingscdnurl', null, 'required', null, 'client');
         $this->_form->addRule(
@@ -77,6 +76,9 @@ class settings_form extends moodleform {
                 $urlregexp,
                 'client'
         );
+        if (!empty($this->_customdata['settingscdnurl'])) {
+            $this->_form->setDefault('settingscdnurl', $this->_customdata['settingscdnurl']);
+        }
 
         // Web service fieldset with description.
         $this->_form->addElement(
@@ -97,7 +99,6 @@ class settings_form extends moodleform {
                 array('size' => 30)
         );
         $this->_form->setType('settingswebserviceurl', PARAM_RAW_TRIMMED);
-        $this->_form->setDefault('settingswebserviceurl', $this->_customdata['settingswebserviceurl']);
         $this->_form->addHelpButton('settingswebserviceurl', 'settingswebserviceurl', 'local_openveo_api');
         $this->_form->addRule('settingswebserviceurl', null, 'required', null, 'client');
         $this->_form->addRule(
@@ -107,6 +108,9 @@ class settings_form extends moodleform {
                 $urlregexp,
                 'client'
         );
+        if (!empty($this->_customdata['settingswebserviceurl'])) {
+            $this->_form->setDefault('settingswebserviceurl', $this->_customdata['settingswebserviceurl']);
+        }
 
         // Web service server certificate file path.
         // A simple validation is made on the file path to validate windows and linux paths, no special character is
@@ -118,10 +122,6 @@ class settings_form extends moodleform {
                 array('size' => 30)
         );
         $this->_form->setType('settingswebservicecertificatefilepath', PARAM_RAW_TRIMMED);
-        $this->_form->setDefault(
-                'settingswebservicecertificatefilepath',
-                $this->_customdata['settingswebservicecertificatefilepath']
-        );
         $this->_form->addHelpButton(
                 'settingswebservicecertificatefilepath',
                 'settingswebservicecertificatefilepath',
@@ -134,6 +134,12 @@ class settings_form extends moodleform {
                 '/^(?:[a-zA-Z]{1}:(?:\\\[A-Za-z0-9_\-.]+)+)$|^(?:(?:\/[A-Za-z0-9_\-.]+)+)$/',
                 'client'
         );
+        if (!empty($this->_customdata['settingswebservicecertificatefilepath'])) {
+            $this->_form->setDefault(
+                    'settingswebservicecertificatefilepath',
+                    $this->_customdata['settingswebservicecertificatefilepath']
+            );
+        }
 
         // Web service client id.
         $this->_form->addElement(
@@ -143,12 +149,14 @@ class settings_form extends moodleform {
                 array('size' => 30)
         );
         $this->_form->setType('settingswebserviceclientid', PARAM_ALPHANUMEXT);
-        $this->_form->setDefault(
-                'settingswebserviceclientid',
-                $this->_customdata['settingswebserviceclientid']
-        );
         $this->_form->addHelpButton('settingswebserviceclientid', 'settingswebserviceclientid', 'local_openveo_api');
         $this->_form->addRule('settingswebserviceclientid', null, 'required', null, 'client');
+        if (!empty($this->_customdata['settingswebserviceclientid'])) {
+            $this->_form->setDefault(
+                    'settingswebserviceclientid',
+                    $this->_customdata['settingswebserviceclientid']
+            );
+        }
 
         // Web service client secret.
         $this->_form->addElement(
@@ -158,16 +166,18 @@ class settings_form extends moodleform {
                 array('size' => 30)
         );
         $this->_form->setType('settingswebserviceclientsecret', PARAM_ALPHANUMEXT);
-        $this->_form->setDefault(
-                'settingswebserviceclientsecret',
-                $this->_customdata['settingswebserviceclientsecret']
-        );
         $this->_form->addHelpButton(
                 'settingswebserviceclientsecret',
                 'settingswebserviceclientsecret',
                 'local_openveo_api'
         );
         $this->_form->addRule('settingswebserviceclientsecret', null, 'required', null, 'client');
+        if (!empty($this->_customdata['settingswebserviceclientsecret'])) {
+            $this->_form->setDefault(
+                    'settingswebserviceclientsecret',
+                    $this->_customdata['settingswebserviceclientsecret']
+            );
+        }
 
         $this->add_action_buttons(false, get_string('settingssubmitlabel', 'local_openveo_api'));
     }
