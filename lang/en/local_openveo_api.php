@@ -59,7 +59,7 @@ $string['settingswebserviceclientsecret_help'] = 'Moodle client secret to access
 $string['settingswebservicecredentialserror'] = 'Authentication to OpenVeo web service failed when trying to connect with actual configuration. Wrong credentials.';
 $string['settingswebservicecommunicationerror'] = 'Can\'t reach OpenVeo web service with actual configuration. Is the URL correct? Is OpenVeo web service server running?';
 $string['settingswebservicecertificateerror'] = 'Can\'t reach OpenVeo web service with actual configuration. Is the certificate path correct?';
-$string['settingswebservicesuccess'] = 'The test to connect to OpenVeo web service with actual configuration has succeed.';
+$string['settingswebservicesuccess'] = 'The test to connect to OpenVeo web service with actual configuration has succeeded.';
 
 // Events
 $string['eventconnectionfailed'] = 'OpenVeo connection failed';
