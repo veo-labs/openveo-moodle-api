@@ -81,12 +81,12 @@ class settings_page implements renderable, templatable {
     public function __construct($pagetitle) {
         $this->pagetitle = $pagetitle;
         $defaults = array(
-            'settingscdnurl' => get_config('openveo_api', 'settingscdnurl'),
-            'settingswebserviceurl' => get_config('openveo_api', 'settingswebserviceurl'),
-            'settingswebserviceclientid' => get_config('openveo_api', 'settingswebserviceclientid'),
-            'settingswebserviceclientsecret' => get_config('openveo_api', 'settingswebserviceclientsecret'),
+            'settingscdnurl' => get_config('local_openveo_api', 'settingscdnurl'),
+            'settingswebserviceurl' => get_config('local_openveo_api', 'settingswebserviceurl'),
+            'settingswebserviceclientid' => get_config('local_openveo_api', 'settingswebserviceclientid'),
+            'settingswebserviceclientsecret' => get_config('local_openveo_api', 'settingswebserviceclientsecret'),
             'settingswebservicecertificatefilepath' => get_config(
-                    'openveo_api',
+                    'local_openveo_api',
                     'settingswebservicecertificatefilepath'
             )
         );
@@ -105,14 +105,14 @@ class settings_page implements renderable, templatable {
             );
 
             // Save configuration to database.
-            set_config('settingscdnurl', $data->settingscdnurl, 'openveo_api');
-            set_config('settingswebserviceurl', $data->settingswebserviceurl, 'openveo_api');
-            set_config('settingswebserviceclientid', $data->settingswebserviceclientid, 'openveo_api');
-            set_config('settingswebserviceclientsecret', $data->settingswebserviceclientsecret, 'openveo_api');
+            set_config('settingscdnurl', $data->settingscdnurl, 'local_openveo_api');
+            set_config('settingswebserviceurl', $data->settingswebserviceurl, 'local_openveo_api');
+            set_config('settingswebserviceclientid', $data->settingswebserviceclientid, 'local_openveo_api');
+            set_config('settingswebserviceclientsecret', $data->settingswebserviceclientsecret, 'local_openveo_api');
             set_config(
                     'settingswebservicecertificatefilepath',
                     $data->settingswebservicecertificatefilepath,
-                    'openveo_api'
+                    'local_openveo_api'
             );
 
         } else {
