@@ -63,3 +63,6 @@ $string['settingswebservicesuccess'] = 'The test to connect to OpenVeo web servi
 
 // Events
 $string['eventconnectionfailed'] = 'OpenVeo connection failed';
+
+// Privacy (GDPR)
+$string['privacy:metadata'] = 'The local OpenVeo API plugin does not store or transmit any personal data.';
