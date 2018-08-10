@@ -78,7 +78,7 @@ class settings_page implements renderable, templatable {
      *
      * @param string $pagetitle The translated page title
      */
-    public function __construct($pagetitle) {
+    public function __construct(string $pagetitle) {
         $this->pagetitle = $pagetitle;
         $defaults = array(
             'settingscdnurl' => get_config('local_openveo_api', 'settingscdnurl'),
@@ -136,7 +136,7 @@ class settings_page implements renderable, templatable {
      * @param renderer_base $output Used to do a final render of any components that need to be rendered for export
      * @return stdClass Data to expose to the template
      */
-    public function export_for_template(renderer_base $output) {
+    public function export_for_template(renderer_base $output) : stdClass {
         $data = new stdClass();
         $data->title = $this->pagetitle;
         $data->form = $this->form->render();
@@ -157,7 +157,7 @@ class settings_page implements renderable, templatable {
      *
      * @param string $message The error message to send along with the event
      */
-    private function send_connection_failed_event($message) {
+    private function send_connection_failed_event(string $message) {
         $event = connection_failed::create(array(
             'context' => context_system::instance(),
             'other' => array(
@@ -176,7 +176,12 @@ class settings_page implements renderable, templatable {
      * @param string $certificatefilepath The absolute path to the OpenVeo web service certificate file if necessary
      * @return string|null An error message if connection failed, null otherwise
      */
-    private function test_connection_to_openveo($url, $clientid, $clientsecret, $certificatefilepath = null) {
+    private function test_connection_to_openveo(
+            string $url,
+            string $clientid,
+            string $clientsecret,
+            string $certificatefilepath = null
+    ) {
         try {
             $client = new Client(
                     $url,

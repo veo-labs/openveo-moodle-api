@@ -46,7 +46,7 @@ class renderer extends plugin_renderer_base {
      * @param settings_page $page The settings page
      * @return string The computed HTML of the settings page
      */
-    public function render_settings_page($page) {
+    public function render_settings_page(settings_page $page) : string {
         $data = $page->export_for_template($this);
         return parent::render_from_template('local_openveo_api/settings_page', $data);
     }

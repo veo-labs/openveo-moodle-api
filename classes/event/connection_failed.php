@@ -53,7 +53,7 @@ class connection_failed extends base {
      *
      * @return string The event localized name
      */
-    public static function get_name() {
+    public static function get_name() : string {
         return get_string('eventconnectionfailed', 'local_openveo_api');
     }
 
@@ -62,7 +62,7 @@ class connection_failed extends base {
      *
      * @return string The description of what happened
      */
-    public function get_description() {
+    public function get_description() : string {
         return "Failed to connect to OpenVeo web service with message: \"{$this->other['message']}\".";
     }
 
@@ -71,7 +71,7 @@ class connection_failed extends base {
      *
      * @return moodle_url
      */
-    public function get_url() {
+    public function get_url() : moodle_url {
         global $CFG;
         return new moodle_url("{$CFG->wwwroot}/local/openveo_api/openveo_settings.php");
     }
