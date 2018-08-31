@@ -81,14 +81,11 @@ class settings_page implements renderable, templatable {
     public function __construct(string $pagetitle) {
         $this->pagetitle = $pagetitle;
         $defaults = array(
-            'settingscdnurl' => get_config('local_openveo_api', 'settingscdnurl'),
-            'settingswebserviceurl' => get_config('local_openveo_api', 'settingswebserviceurl'),
-            'settingswebserviceclientid' => get_config('local_openveo_api', 'settingswebserviceclientid'),
-            'settingswebserviceclientsecret' => get_config('local_openveo_api', 'settingswebserviceclientsecret'),
-            'settingswebservicecertificatefilepath' => get_config(
-                    'local_openveo_api',
-                    'settingswebservicecertificatefilepath'
-            )
+            'cdnurl' => get_config('local_openveo_api', 'cdnurl'),
+            'webserviceurl' => get_config('local_openveo_api', 'webserviceurl'),
+            'webserviceclientid' => get_config('local_openveo_api', 'webserviceclientid'),
+            'webserviceclientsecret' => get_config('local_openveo_api', 'webserviceclientsecret'),
+            'webservicecertificatefilepath' => get_config('local_openveo_api', 'webservicecertificatefilepath')
         );
         $this->form = new settings_form(null, $defaults);
 
@@ -98,32 +95,38 @@ class settings_page implements renderable, templatable {
             // Formular has been submitted and is validated.
             // Test connection with information from the formular.
             $this->connectionerrormessage = $this->test_connection_to_openveo(
-                    $data->settingswebserviceurl,
-                    $data->settingswebserviceclientid,
-                    $data->settingswebserviceclientsecret,
-                    $data->settingswebservicecertificatefilepath
+                    $data->webserviceurl,
+                    $data->webserviceclientid,
+                    $data->webserviceclientsecret,
+                    $data->webservicecertificatefilepath
             );
 
             // Save configuration to database.
-            set_config('settingscdnurl', $data->settingscdnurl, 'local_openveo_api');
-            set_config('settingswebserviceurl', $data->settingswebserviceurl, 'local_openveo_api');
-            set_config('settingswebserviceclientid', $data->settingswebserviceclientid, 'local_openveo_api');
-            set_config('settingswebserviceclientsecret', $data->settingswebserviceclientsecret, 'local_openveo_api');
+            set_config('cdnurl', $data->cdnurl, 'local_openveo_api');
+            set_config('webserviceurl', $data->webserviceurl, 'local_openveo_api');
+            set_config('webserviceclientid', $data->webserviceclientid, 'local_openveo_api');
+            set_config('webserviceclientsecret', $data->webserviceclientsecret, 'local_openveo_api');
             set_config(
-                    'settingswebservicecertificatefilepath',
-                    $data->settingswebservicecertificatefilepath,
+                    'webservicecertificatefilepath',
+                    $data->webservicecertificatefilepath,
                     'local_openveo_api'
             );
+
+            unset_config('settingscdnurl', 'local_openveo_api');
+            unset_config('settingswebserviceurl', 'local_openveo_api');
+            unset_config('settingswebserviceclientid', 'local_openveo_api');
+            unset_config('settingswebserviceclientsecret', 'local_openveo_api');
+            unset_config('settingswebservicecertificatefilepath', 'local_openveo_api');
 
         } else {
 
             // Formular has not been submitted.
             // Test connection with actual configuration.
             $this->connectionerrormessage = $this->test_connection_to_openveo(
-                    $defaults['settingswebserviceurl'],
-                    $defaults['settingswebserviceclientid'],
-                    $defaults['settingswebserviceclientsecret'],
-                    $defaults['settingswebservicecertificatefilepath']
+                    $defaults['webserviceurl'],
+                    $defaults['webserviceclientid'],
+                    $defaults['webserviceclientsecret'],
+                    $defaults['webservicecertificatefilepath']
             );
 
         }
