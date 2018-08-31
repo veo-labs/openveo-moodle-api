@@ -23,6 +23,16 @@ OpenVeo Moodle API does not embed OpenVeo REST PHP client which must be manually
 
 If you experience troubleshooting during installation, please refer to the [Moodle](https://docs.moodle.org) installation plugin documentation.
 
+## Usage
+
+```php
+// Include OpenVeo REST PHP client autoloader.
+require_once($CFG->dirroot . '/local/openveo_api/lib.php');
+
+// Use OpenVeo REST PHP client (see https://github.com/veo-labs/openveo-rest-php-client for more information).
+use Openveo\Client\Client;
+```
+
 # Contributors
 
 Maintainer: [Veo-Labs](http://www.veo-labs.com/)
