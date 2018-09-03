@@ -112,12 +112,6 @@ class settings_page implements renderable, templatable {
                     'local_openveo_api'
             );
 
-            unset_config('settingscdnurl', 'local_openveo_api');
-            unset_config('settingswebserviceurl', 'local_openveo_api');
-            unset_config('settingswebserviceclientid', 'local_openveo_api');
-            unset_config('settingswebserviceclientsecret', 'local_openveo_api');
-            unset_config('settingswebservicecertificatefilepath', 'local_openveo_api');
-
         } else {
 
             // Formular has not been submitted.
