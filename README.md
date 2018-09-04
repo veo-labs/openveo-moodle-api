@@ -19,7 +19,7 @@ OpenVeo Moodle API does not embed OpenVeo REST PHP client which must be manually
 - Unzip the **openveo-rest-php-client.zip** file in **openveo_api/lib** folder
 - Rename **openveo_api/lib/openveo-rest-php-client-\*** into **openveo_api/lib/openveo-rest-php-client**
 - Move your **openveo_api** folder into **MOODLE_ROOT_PATH/local/** where MOODLE_ROOT_PATH is your Moodle installation folder
-- In your Moodle site (as admin) go to Settings > Site administration > Notifications: you should get a message saying the plugin is installed
+- In your Moodle site (as admin) go to **Site administration > Notifications**: you should get a message saying the plugin is installed
 
 If you experience troubleshooting during installation, please refer to the [Moodle](https://docs.moodle.org) installation plugin documentation.
 
