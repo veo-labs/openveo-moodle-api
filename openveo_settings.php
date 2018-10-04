@@ -24,6 +24,7 @@
 
 require('../../config.php');
 require_once($CFG->libdir . '/adminlib.php');
+require_once($CFG->dirroot . '/local/openveo_api/lib.php');
 
 use local_openveo_api\output\settings_page;
 
