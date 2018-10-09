@@ -22,10 +22,10 @@
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// Plugin name
+// Plugin name.
 $string['pluginname'] = 'OpenVeo API';
 
-// Settings page
+// Settings page: Title.
 $string['settingstitle'] = 'OpenVeo API settings';
 $string['settingssubmitlabel'] = 'Save changes';
 
@@ -55,14 +55,14 @@ $string['settingswebserviceclientsecretlabel'] = 'Client secret';
 $string['settingswebserviceclientsecret'] = 'Client secret';
 $string['settingswebserviceclientsecret_help'] = 'Moodle client secret to access OpenVeo web service (e.g 128f5fd5d980fa7f261bc1592f7f3a44c0e5fc42). An OpenVeo client can be retrieved from an OpenVeo administrator.';
 
-// Settings page: Test connection messages
+// Settings page: Notifications.
 $string['settingswebservicecredentialserror'] = 'Authentication to OpenVeo web service failed when trying to connect with actual configuration. Wrong credentials.';
 $string['settingswebservicecommunicationerror'] = 'Can\'t reach OpenVeo web service with actual configuration. Is the URL correct? Is OpenVeo web service server running?';
 $string['settingswebservicecertificateerror'] = 'Can\'t reach OpenVeo web service with actual configuration. Is the certificate path correct?';
 $string['settingswebservicesuccess'] = 'The test to connect to OpenVeo web service with actual configuration has succeeded.';
 
-// Events
+// Events.
 $string['eventconnectionfailed'] = 'OpenVeo connection failed';
 
-// Privacy (GDPR)
+// Privacy (GDPR).
 $string['privacy:metadata'] = 'The local OpenVeo API plugin does not store or transmit any personal data.';

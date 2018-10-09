@@ -22,10 +22,10 @@
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// Plugin name
+// Plugin name.
 $string['pluginname'] = 'OpenVeo API';
 
-// Settings page: Title
+// Settings page: Title.
 $string['settingstitle'] = 'OpenVeo API configuration';
 $string['settingssubmitlabel'] = 'Enregistrer les modifications';
 
@@ -55,14 +55,14 @@ $string['settingswebserviceclientsecretlabel'] = 'Secret client';
 $string['settingswebserviceclientsecret'] = 'Secret client';
 $string['settingswebserviceclientsecret_help'] = 'Secret du client Moodle pour accéder au web service OpenVeo (ex : 128f5fd5d980fa7f261bc1592f7f3a44c0e5fc42). Un client OpenVeo peut être récupéré auprès d\'un administrateur OpenVeo.';
 
-// Settings page: Errors
+// Settings page: Notifications.
 $string['settingswebservicecredentialserror'] = 'L\'authentification au web service OpenVeo a échoué avec la configuration actuelle. Mauvais identifiant et / ou secret.';
 $string['settingswebservicecommunicationerror'] = 'La connexion au web service OpenVeo a échoué avec la configuration actuelle. L\'URL est-elle correcte ? Le web service OpenVeo est-il démarré ?';
 $string['settingswebservicecertificateerror'] = 'La connexion au web service OpenVeo a échoué avec la configuration actuelle. Le chemin vers le certificat est-il correct ?';
 $string['settingswebservicesuccess'] = 'Le test de connexion à OpenVeo a réussi avec la configuration actuelle.';
 
-// Events
+// Events.
 $string['eventconnectionfailed'] = 'Connexion OpenVeo échouée';
 
-// Privacy (GDPR)
+// Privacy (GDPR).
 $string['privacy:metadata'] = 'Le plugin local OpenVeo API n\'enregistre ni ne transmet de données personnelles.';
