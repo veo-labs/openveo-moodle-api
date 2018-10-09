@@ -26,6 +26,7 @@ namespace local_openveo_api\output;
 
 defined('MOODLE_INTERNAL') || die();
 
+use Exception;
 use renderable;
 use templatable;
 use renderer_base;
@@ -33,7 +34,6 @@ use stdClass;
 use context_system;
 use Openveo\Client\Client;
 use Openveo\Exception\ClientException;
-use Openveo\Exception\RestClientException;
 use local_openveo_api\event\connection_failed;
 
 /**
@@ -194,7 +194,7 @@ class settings_page implements renderable, templatable {
             $this->send_connection_failed_event($e->getMessage());
 
             return get_string('settingswebservicecredentialserror', 'local_openveo_api');
-        } catch (RestClientException $e) {
+        } catch (Exception $e) {
 
             // Can't reach the server.
             // Trigger an event informing that connection to OpenVeo web service has failed.
