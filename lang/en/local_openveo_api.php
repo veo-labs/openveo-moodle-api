@@ -34,15 +34,15 @@ $string['settingscdnheader'] = 'CDN';
 $string['settingscdnheaderdescription'] = 'Moodle may need public resources from OpenVeo like videos or images. These resources are delivered by OpenVeo CDN (<b>C</b>ontent <b>D</b>elivery <b>N</b>etwork).';
 $string['settingscdnurllabel'] = 'CDN URL';
 $string['settingscdnurl'] = 'CDN URL';
-$string['settingscdnurl_help'] = 'OpenVeo Content Delivery Network URL (e.g. https://openveo.local). Usually the URL of OpenVeo.';
-$string['settingscdnurlformaterror'] = 'Invalid URL (e.g. https://openveo.local).';
+$string['settingscdnurl_help'] = 'OpenVeo <b>C</b>ontent <b>D</b>elivery <b>N</b>etwork URL (e.g. https://openveo.local). Usually the URL of OpenVeo.';
+$string['settingscdnurlformaterror'] = 'Invalid URL (e.g. https://openveo.local)';
 
 // Settings page: Web service configuration form.
 $string['settingswebserviceheader'] = 'Web service';
-$string['settingswebserviceheaderdescription'] = 'Configure access to the OpenVeo web service. OpenVeo web service can be used to manage videos holded by OpenVeo. All fields must be populated. If you haven\'t all the information to complete the form, please contact the OpenVeo administrator.';
+$string['settingswebserviceheaderdescription'] = 'Configure access to the OpenVeo web service. OpenVeo web service can be used to manage videos holded by OpenVeo. If you haven\'t all the information to complete the form, please contact the OpenVeo administrator.';
 $string['settingswebserviceurllabel'] = 'Web service server URL';
 $string['settingswebserviceurl'] = 'Web service server URL';
-$string['settingswebserviceurl_help'] = 'The OpenVeo web service HTTP(S) server URL (e.g. https://openveo.local:1443)';
+$string['settingswebserviceurl_help'] = 'The OpenVeo web service HTTP(S) server URL (e.g. https://openveo.local:1443).';
 $string['settingswebserviceurlformaterror'] = 'Invalid URL (e.g. https://openveo.local:1443)';
 $string['settingswebservicecertificatefilepathlabel'] = 'OpenVeo web service certificate';
 $string['settingswebservicecertificatefilepath'] = 'OpenVeo web service certificate';
@@ -50,16 +50,16 @@ $string['settingswebservicecertificatefilepath_help'] = 'The OpenVeo web service
 $string['settingswebservicecertificatefilepathformaterror'] = 'Invalid file path (e.g. /etc/ssl/certs/openveo-ws.pem)';
 $string['settingswebserviceclientidlabel'] = 'Client id';
 $string['settingswebserviceclientid'] = 'Client id';
-$string['settingswebserviceclientid_help'] = 'Moodle client id to access OpenVeo web service (e.g Hk_EPX1BQ). An OpenVeo client can be retrieved from an OpenVeo administrator.';
+$string['settingswebserviceclientid_help'] = 'Id to access OpenVeo web service (e.g. Hk_EPX1BQ). An id can be retrieved from an OpenVeo administrator.';
 $string['settingswebserviceclientsecretlabel'] = 'Client secret';
 $string['settingswebserviceclientsecret'] = 'Client secret';
-$string['settingswebserviceclientsecret_help'] = 'Moodle client secret to access OpenVeo web service (e.g 128f5fd5d980fa7f261bc1592f7f3a44c0e5fc42). An OpenVeo client can be retrieved from an OpenVeo administrator.';
+$string['settingswebserviceclientsecret_help'] = 'Secret to access OpenVeo web service (e.g. 128f5fd5d980fa7f261bc1592f7f3a44c0e5fc42). A secret can be retrieved from an OpenVeo administrator.';
 
 // Settings page: Notifications.
 $string['settingswebservicecredentialserror'] = 'Authentication to OpenVeo web service failed when trying to connect with actual configuration. Wrong credentials.';
 $string['settingswebservicecommunicationerror'] = 'Can\'t reach OpenVeo web service with actual configuration. Is the URL correct? Is OpenVeo web service server running?';
 $string['settingswebservicecertificateerror'] = 'Can\'t reach OpenVeo web service with actual configuration. Is the certificate path correct?';
-$string['settingswebservicesuccess'] = 'The test to connect to OpenVeo web service with actual configuration has succeeded.';
+$string['settingswebservicesuccess'] = 'The test to connect to OpenVeo web service with actual configuration, has succeeded.';
 
 // Events.
 $string['eventconnectionfailed'] = 'OpenVeo connection failed';
