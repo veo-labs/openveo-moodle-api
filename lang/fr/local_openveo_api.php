@@ -35,7 +35,7 @@ $string['settingscdnheaderdescription'] = 'Moodle peut nécessiter des ressource
 $string['settingscdnurllabel'] = 'URL du CDN';
 $string['settingscdnurl'] = 'URL du CDN';
 $string['settingscdnurl_help'] = 'URL du CDN (<b>C</b>ontent <b>D</b>elivery <b>N</b>etwork) d\'OpenVeo (ex : https://openveo.local). Habituellement l\'URL d\'OpenVeo.';
-$string['settingscdnurlformaterror'] = 'URL invalide (ex : https://openveo.local).';
+$string['settingscdnurlformaterror'] = 'URL invalide (ex : https://openveo.local)';
 
 // Settings page: Web service configuration form.
 $string['settingswebserviceheader'] = 'Web service';
@@ -43,11 +43,11 @@ $string['settingswebserviceheaderdescription'] = 'Configurer l\'accès au web se
 $string['settingswebserviceurllabel'] = 'URL du web service';
 $string['settingswebserviceurl'] = 'URL du web service';
 $string['settingswebserviceurl_help'] = 'L\'URL du web service HTTP(S) d\'OpenVeo (ex : https://openveo.local:1443).';
-$string['settingswebserviceurlformaterror'] = 'URL invalide (ex : https://openveo.local:1443).';
+$string['settingswebserviceurlformaterror'] = 'URL invalide (ex : https://openveo.local:1443)';
 $string['settingswebservicecertificatefilepathlabel'] = 'Certificat du web service OpenVeo';
 $string['settingswebservicecertificatefilepath'] = 'Certificat du web service OpenVeo';
 $string['settingswebservicecertificatefilepath_help'] = 'Chemin absolu du certificat web service OpenVeo si HTTPS (ex : /etc/ssl/certs/openveo-ws.pem).';
-$string['settingswebservicecertificatefilepathformaterror'] = 'Chemin invalide (ex : /etc/ssl/certs/openveo-ws.pem).';
+$string['settingswebservicecertificatefilepathformaterror'] = 'Chemin invalide (ex : /etc/ssl/certs/openveo-ws.pem)';
 $string['settingswebserviceclientidlabel'] = 'Identifiant client';
 $string['settingswebserviceclientid'] = 'Identifiant client';
 $string['settingswebserviceclientid_help'] = 'Identifiant client Moodle pour accéder au web service OpenVeo (ex : Hk_EPX1BQ). Un client OpenVeo peut être récupéré auprès d\'un administrateur OpenVeo.';
