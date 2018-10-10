@@ -15,7 +15,7 @@
 // along with Moodle. If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Defines an event warning about an error when requesting OpenVeo web service.
+ * Defines an event warning about an error when testing connection to OpenVeo web service.
  *
  * @package local_openveo_api
  * @copyright 2018 Veo-labs
@@ -28,42 +28,25 @@ defined('MOODLE_INTERNAL') || die();
 
 use core\event\base;
 use moodle_url;
+use local_openveo_api\event\requesting_openveo_failed;
 
 /**
- * Defines the event triggered if requesting OpenVeo web service failed.
+ * Defines the event triggered if testing connection to OpenVeo web service failed.
  *
  * @package local_openveo_api
  * @copyright 2018 Veo-labs
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class requesting_openveo_failed extends base {
+class testing_openveo_failed extends requesting_openveo_failed {
 
     /**
-     * Initializes event static datas.
+     * Gets event relevant URL.
      *
-     * Indicates that the event is related to a read operation and has no education level.
+     * @return moodle_url
      */
-    protected function init() {
-        $this->data['crud'] = 'r';
-        $this->data['edulevel'] = self::LEVEL_OTHER;
-    }
-
-    /**
-     * Gets a human readable name for the event.
-     *
-     * @return string The event localized name
-     */
-    public static function get_name() : string {
-        return get_string('eventrequestingopenveofailed', 'local_openveo_api');
-    }
-
-    /**
-     * Returns non-localised description of what happened.
-     *
-     * @return string The description of what happened
-     */
-    public function get_description() : string {
-        return "Failed to request OpenVeo with message: \"{$this->other['message']}\".";
+    public function get_url() : moodle_url {
+        global $CFG;
+        return new moodle_url("{$CFG->wwwroot}/local/openveo_api/openveo_settings.php");
     }
 
 }

@@ -34,7 +34,7 @@ use stdClass;
 use context_system;
 use Openveo\Client\Client;
 use Openveo\Exception\ClientException;
-use local_openveo_api\event\requesting_openveo_failed;
+use local_openveo_api\event\testing_openveo_failed;
 
 /**
  * Defines the plugin settings page.
@@ -150,12 +150,12 @@ class settings_page implements renderable, templatable {
     }
 
     /**
-     * Triggers a local_openveo_api\event\requesting_openveo_failed event with the given message.
+     * Triggers a local_openveo_api\event\testing_openveo_failed event with the given message.
      *
      * @param string $message The error message to send along with the event
      */
-    private function send_requesting_openveo_failed_event(string $message) {
-        $event = requesting_openveo_failed::create(array(
+    private function send_testing_openveo_failed_event(string $message) {
+        $event = testing_openveo_failed::create(array(
             'context' => context_system::instance(),
             'other' => array(
                 'message' => $message
@@ -191,14 +191,14 @@ class settings_page implements renderable, templatable {
 
             // Authentication has failed.
             // Trigger an event informing that connection to OpenVeo web service has failed.
-            $this->send_requesting_openveo_failed_event($e->getMessage());
+            $this->send_testing_openveo_failed_event($e->getMessage());
 
             return get_string('settingswebservicecredentialserror', 'local_openveo_api');
         } catch (Exception $e) {
 
             // Can't reach the server.
             // Trigger an event informing that connection to OpenVeo web service has failed.
-            $this->send_requesting_openveo_failed_event($e->getMessage());
+            $this->send_testing_openveo_failed_event($e->getMessage());
 
             // Problem with the certificate if error message contains "CAfile"
             if (strpos($e->getMessage(), 'CAfile') !== false) {
