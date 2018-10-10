@@ -15,7 +15,7 @@
 // along with Moodle. If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Defines an event warning about a connection failure when trying to communicate with OpenVeo.
+ * Defines an event warning about an error when requesting OpenVeo web service.
  *
  * @package local_openveo_api
  * @copyright 2018 Veo-labs
@@ -30,13 +30,13 @@ use core\event\base;
 use moodle_url;
 
 /**
- * Defines the event triggered if connection to OpenVeo web service failed.
+ * Defines the event triggered if requesting OpenVeo web service failed.
  *
  * @package local_openveo_api
  * @copyright 2018 Veo-labs
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class connection_failed extends base {
+class requesting_openveo_failed extends base {
 
     /**
      * Initializes event static datas.
@@ -54,7 +54,7 @@ class connection_failed extends base {
      * @return string The event localized name
      */
     public static function get_name() : string {
-        return get_string('eventconnectionfailed', 'local_openveo_api');
+        return get_string('eventrequestingopenveofailed', 'local_openveo_api');
     }
 
     /**
@@ -63,7 +63,7 @@ class connection_failed extends base {
      * @return string The description of what happened
      */
     public function get_description() : string {
-        return "Failed to connect to OpenVeo web service with message: \"{$this->other['message']}\".";
+        return "Failed to request OpenVeo with message: \"{$this->other['message']}\".";
     }
 
     /**

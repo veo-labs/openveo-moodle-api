@@ -62,7 +62,7 @@ $string['settingswebservicecertificateerror'] = 'Can\'t reach OpenVeo web servic
 $string['settingswebservicesuccess'] = 'The test to connect to OpenVeo web service with actual configuration, has succeeded.';
 
 // Events.
-$string['eventconnectionfailed'] = 'OpenVeo connection failed';
+$string['eventrequestingopenveofailed'] = 'Requesting OpenVeo failed';
 
 // Privacy (GDPR).
 $string['privacy:metadata'] = 'The local OpenVeo API plugin does not store or transmit any personal data.';
