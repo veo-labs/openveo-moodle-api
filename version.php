@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_openveo_api';
-$plugin->version = 2018073100;
+$plugin->version = 2018101700;
 $plugin->requires = 2017111300;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = '1.0.0';
