@@ -8,7 +8,7 @@ OpenVeo Moodle API is a Moodle local plugin which exposes the [OpenVeo REST PHP 
 
 - PHP >=7
 - Openveo >=5.1.1
-- Moodle version >3.4.0
+- Moodle version >=3.4.0
 
 ## Installation
 
